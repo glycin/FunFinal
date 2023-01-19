@@ -24,11 +24,6 @@ intellij {
     plugins.set(listOf(/* Plugin Dependencies */))
 }
 
-dependencies {
-    // https://mvnrepository.com/artifact/javazoom/jlayer
-    implementation("javazoom:jlayer:1.0.1")
-}
-
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
