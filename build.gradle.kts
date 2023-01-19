@@ -1,12 +1,11 @@
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.11.0"
+    id("org.jetbrains.intellij") version "1.12.0"
     id("org.jetbrains.kotlin.jvm") version "1.8.0"
-    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "com.glycin.funfinal"
-version = "1.1.2"
+version = "1.1.3"
 
 repositories {
     mavenCentral()
@@ -32,6 +31,10 @@ tasks {
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         kotlinOptions.jvmTarget = "11"
+    }
+
+    buildSearchableOptions {
+        enabled = false
     }
 
     patchPluginXml {
